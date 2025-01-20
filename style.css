@@ -1,0 +1,394 @@
+*{
+    margin: 0;
+    padding: 0;                                      /* remove defult browser spacing*/
+    box-sizing: border-box;                          /* padding and borders included in wdth/height*/
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("IMG/IMG8.jpg") ;
+    height: 100vh;/* Sets the height as 100% viewport*/
+    background-size: cover;
+    background-position: center;
+    min-height: 100px /*same hight on all screens*/
+}
+
+.menu{
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #fff;
+    padding-bottom: 10px;
+}
+
+.menu ul{
+    display: inline;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.menu ul li {
+    margin: 25px 50px;
+}
+
+    .menu ul li a {
+    text-decoration: solid;
+    color: #fafafa;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.5s;
+    font-size: larger;
+}
+
+  .menu ul li a:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px
+}
+
+.Title h1{
+    color: #fff;
+    position: relative; top: 200px;
+    letter-spacing: 1.2cap;
+    text-align: center;
+    font-size: 2.5em;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.welcome-section {
+    background-color: #171717;
+    color: #ccdbe2; /* White text */
+    padding: 35px 10px;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    gap: 20px;
+}
+
+/* this acts as the parent Container for Image and Description */
+.image-container {
+    position: relative;
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(186, 188, 196, 0.6); /* shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease; /* zoom */
+  }
+  
+  .image-container:hover img {
+    transform: scale(1.05); /* zoom on hover */
+  }
+  
+  /* Description Layer */
+  .image-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7); /* transparent black background */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.4;
+    opacity: 0; 
+    transform: translateY(100%); /* Slide-in effect */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  }
+  
+  /* This Shows Description on Hover */
+  .image-container:hover .image-description {
+    opacity: 1;
+    transform: translateY(0); /* Slidein from bottom */
+  }
+  
+.welcome-text {
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
+}
+
+.welcome-text h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.welcome-text h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.welcome-text p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.mission-btn {
+    background-color: #fff; /* White button */
+    color: #0c0c0c; /* Black text */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, color 0.3s ease;
+}
+
+.mission-btn:hover {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+}
+
+.welcome-image {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.welcome-image img {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(92, 84, 48, 0); /* Soft grey shadow */
+    transform: scale(1); /* Default scale */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* transition for hover */
+}
+
+.welcome-image img:hover {
+    transform: scale(1.05); /*a bit of zoom on hover */
+    box-shadow: 8px 8px 20px rgba(99, 99, 99, 0.8); /* Strongerr shadow on hover */
+}
+
+.welcome-img-top {
+    align-self: flex-start;
+}
+
+.welcome-img-bottom {
+    align-self: flex-end;
+}
+
+
+.info-section {
+    position: relative;
+    background-image: url('IMG/img13.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px; /* Adjust padding for spacing */
+    color: #fff; /* White text for contrast */
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.info-container {
+    max-width: 900px;
+    margin: 0 auto; /* Center content */
+    background: rgba(0, 0, 0, 0.5); /* transparent background for readability */
+    padding: 40px;
+    border-radius: 10px; 
+}
+
+.info-heading {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.info-quote {
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #f0c18c; 
+}
+
+.info-detail {
+    font-size: 1rem;
+    line-height: 1.8;
+    opacity: 0.9; /*  transparency for a soft text  */
+    margin-top: 10px;
+    text-align: justify;
+}
+
+
+.gallery-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #171717;
+   
+}
+  .gallery-section h2 {
+    margin-bottom: 20px;
+    color: #fff;
+    letter-spacing: 0.5cap;
+    text-align: center;
+    font-weight: bold;
+}
+  .gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .gallery-item {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover img {
+    transform: scale(1.1);
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .gallery-item:hover .overlay {
+    opacity: 1;
+  }
+  
+  .overlay p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+  }
+  .contactus-section{
+    background-color: #171717;
+
+  }
+ 
+ .contactus-section p{
+    text-align: center;
+    color: #f0c18c;
+    font-size: 1.0rem;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.0;
+ }
+.contact-btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+.Join-btn{
+    color: #000000; 
+    padding: 10px 20px;
+    border: 2;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, color 0.3s ease;}
+
+.Join-btn:hover {
+    background-color: #ecc79e; 
+    color: #050505; 
+}
+
+
+
+.footerContainer, .footerNav {
+    background-color:rgb(19, 15, 8) ;
+    padding-block: 5px;
+    padding-inline: 5px;
+
+}
+.socialIcons{
+    display: flex;
+   justify-content: center;
+}
+
+.socialIcons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: aliceblue;
+    margin: 10px;
+    border-radius: 50%;
+
+}
+.socialIcons a i{
+    font-size: 1.6em;
+    color: #C1B59F;
+    opacity: 0.9;
+}
+/* Hover on social icons */
+.socialIcons a:hover{
+    background-color: rgb(7, 7, 7);
+    transition: 0.5s;
+
+}
+.socialIcons a:hover i{
+    color: #7B5138;
+    transition: 0.5s;
+
+}
+
+.footerBottom{
+    background-color: rgb(19, 15, 8);
+    padding: 20px;
+    text-align: center;
+
+}
+.footerBottom p{
+color: #C1B59F;
+}
+.Designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0px 5 px;
+}
+
